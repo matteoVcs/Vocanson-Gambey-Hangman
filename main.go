@@ -30,7 +30,7 @@ func main() {
 			}
 		} else if len(letter) == len(w.Word) {
 			if letter == w.Word {
-				for i:= 0; i < len(w.Word); i++ {
+				for i := 0; i < len(w.Word); i++ {
 					w.Guess[i] = string(w.Word[i])
 				}
 				fmt.Println("you win")
@@ -38,10 +38,11 @@ func main() {
 			} else {
 				if w.NbTry <= 2 {
 					fmt.Println("You lose, the word was :", w.Word)
+					w.Loop = false
 				} else {
-						w.I += 2
-						w.NbTry -= 2
-						fmt.Print("Wrong guess, ", w.NbTry, "/10 tries left\n")
+					w.I += 2
+					w.NbTry -= 2
+					fmt.Print("Wrong guess, ", w.NbTry, "/10 tries left\n")
 				}
 			}
 		} else {
