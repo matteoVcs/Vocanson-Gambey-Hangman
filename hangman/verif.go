@@ -28,7 +28,7 @@ func (w *Hang) CheckLetter(letter string) {
 func (w *Hang) CheckEnd() {
 	if w.NbTry <= 0 {
 		w.Loop = false
-		fmt.Println("You lost, the word was", w.Word)
+		fmt.Println("You lose, the word was", w.Word)
 		w.Loop = false
 	}
 	for i := 0; i < len(w.Word); i++ {
