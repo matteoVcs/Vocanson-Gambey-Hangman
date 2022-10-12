@@ -7,7 +7,7 @@ func SaveJoséToTab() []string {
 	var data []byte
 	var tmp string
 	list = append(list, "\n")
-	data, _ = os.ReadFile("josé.txt")
+	data, _ = os.ReadFile("doc/josé.txt")
 	for i := 0; i < len(data); i++ {
 		if data[i] == '=' {
 			i += 8

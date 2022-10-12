@@ -10,7 +10,7 @@ func SaveFileToTab() []string {
 	var list []string
 	var data []byte
 	var tmp string
-	data, _ = os.ReadFile("words.txt")
+	data, _ = os.ReadFile("doc/words.txt")
 	for _, letter := range data {
 		if letter == '\n' {
 			list = append(list, tmp)
