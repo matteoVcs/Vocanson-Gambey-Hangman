@@ -7,11 +7,11 @@ import (
 
 func (w *Hang) CheckLetter(letter string) {
 	var tmp bool
-	if strings.Contains(w.letters, letter) {
+	if strings.Contains(w.Letters, letter) {
 		fmt.Println("Already used")
 		return
 	}
-	for i := 0; i < len(w.Word); i++ {
+	for i := 0; i < w.NbLetter; i++ {
 		if string(w.Word[i]) == letter {
 			w.Guess[i] = letter
 			tmp = true
@@ -22,7 +22,7 @@ func (w *Hang) CheckLetter(letter string) {
 		w.NbTry--
 		fmt.Print("Wrong letter, ", w.NbTry, "/10 tries left\n")
 	}
-	w.letters += letter
+	w.Letters += letter
 }
 
 func (w *Hang) CheckEnd() {
